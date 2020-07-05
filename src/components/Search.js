@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import SearchInput from './SearchInput'
 
 const Search = (props) => {
 
   return (
     <>
-      <input
+      <SearchInput
       type="text"
       placeholder="Search"/>
     </>
