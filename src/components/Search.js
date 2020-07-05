@@ -4,9 +4,10 @@ const Search = (props) => {
 
   return (
     <>
-      <input type="text" />
+      <input
+      type="text"
+      placeholder="Search"/>
     </>
-
   )
 };
 
