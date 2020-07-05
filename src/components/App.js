@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from './Search';
 import '../styles/App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <p>
       ʕ⊙ᴥ⊙ʔ
       </p>
+      <Search/>
        
     </div>
   );
