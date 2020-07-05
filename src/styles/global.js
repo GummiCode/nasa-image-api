@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
   }
 `

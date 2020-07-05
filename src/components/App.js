@@ -1,6 +1,6 @@
 import React from 'react';
-import Search from './Search';
 import { GlobalStyles } from '../styles/global';
+import Header from './Header';
 
 function App() {
   return (
@@ -10,14 +10,7 @@ function App() {
         <p>
           ʕ⊙ᴥ⊙ʔ
         </p>
-        <img 
-          src="./images/nasa.png" 
-          alt="NASA logo" 
-          id="nasa-logo-1"
-          height="303" 
-          width="1024" 
-        />
-        <Search/>
+        <Header />
         </div>
     </>
   )
