@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const StyledSearchInput = styled.input`
@@ -14,11 +14,24 @@ const StyledSearchInput = styled.input`
 `
 
 const SearchInput = (props) => {
+
+  const [searchState, updateSearchState] = useState("");
+
+  const performSearch = () =>  console.log(searchState);
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      performSearch();
+    }
+  };
+
   return (
     <>
       <StyledSearchInput
-      type="text"
-      placeholder="Search"/>
+      type="search"
+      placeholder="Search"
+      onChange={e => updateSearchState(e.target.value)}
+      onKeyDown={handleKeyPress}
+      />
     </>
   )
 };
