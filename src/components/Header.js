@@ -21,8 +21,7 @@ function Header() {
     <HeaderStyles>
       <HeaderImage 
         src="./images/nasa.png" 
-        alt="NASA logo" 
-        data-testid="nasa-logo-1"
+        alt="NASA logo"
       />
       <SearchInput />
     </HeaderStyles>
