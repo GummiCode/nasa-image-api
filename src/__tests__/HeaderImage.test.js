@@ -1,5 +1,5 @@
 import React from 'react';
-import { render} from '@testing-library/react';
+import { render } from '@testing-library/react';
 import HeaderImage from '../components/HeaderImage';
 
 test('component HeaderImage renders', () => {

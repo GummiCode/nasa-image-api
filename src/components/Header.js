@@ -16,6 +16,7 @@ const HeaderStyles = styled.div`
 `;
 
 function Header() {
+  
   return (
     <HeaderStyles>
       <HeaderImage 

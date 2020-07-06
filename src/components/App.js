@@ -6,10 +6,8 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <div className="App">
-        {/* <p>ʕ⊙ᴥ⊙ʔ</p> */}
-        <Header />
-        </div>
+      {/* <p>ʕ⊙ᴥ⊙ʔ</p> */}
+      <Header />
     </>
   )
 }
