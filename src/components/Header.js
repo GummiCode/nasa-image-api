@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeaderImg from './HeaderImg';
+import HeaderImage from './HeaderImage';
 import SearchInput from './SearchInput';
 
 const HeaderContainer = styled.div`
@@ -18,7 +18,7 @@ const HeaderContainer = styled.div`
 function Header() {
   return (
     <HeaderContainer>
-      <HeaderImg 
+      <HeaderImage 
         src="./images/nasa.png" 
         alt="NASA logo" 
         id="nasa-logo-1"
