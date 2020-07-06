@@ -33,6 +33,10 @@ const SearchInput = (props) => {
 
   const [searchState, updateSearchState] = useState("");
 
+  const [searchResults, updateSearchResults] = useState ({
+
+  });
+
   const performSearch = () =>  console.log(searchState);
   const submitSearch = (event) => {
     if (event.key === 'Enter' || event.target.alt === "Click here to search") {
