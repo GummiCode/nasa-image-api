@@ -3,21 +3,25 @@
 exports[`component App renders 1`] = `
 <DocumentFragment>
   <div
-    class="App"
+    class="sc-AxhUy cJaanl"
   >
+    <img
+      alt="NASA logo"
+      class="sc-AxjAm ivsrOq"
+      src="./images/nasa.png"
+    />
     <div
-      class="sc-AxiKw eJAjmE"
+      class="sc-AxirZ kiBIEj"
     >
-      <img
-        alt="NASA logo"
-        class="sc-AxjAm ivsrOq"
-        data-testid="nasa-logo-1"
-        src="./images/nasa.png"
-      />
       <input
-        class="sc-AxirZ iviowO"
+        class="sc-AxiKw iuhRGG"
         placeholder="Search"
-        type="text"
+        type="search"
+      />
+      <img
+        alt="Click here to search"
+        class="sc-AxhCb fasBgv"
+        src="./images/search.png"
       />
     </div>
   </div>

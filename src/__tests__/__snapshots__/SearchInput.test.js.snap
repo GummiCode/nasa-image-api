@@ -2,10 +2,19 @@
 
 exports[`component SearchInput renders 1`] = `
 <DocumentFragment>
-  <input
-    class="sc-AxjAm difBix"
-    placeholder="Search"
-    type="text"
-  />
+  <div
+    class="sc-AxjAm iGGLME"
+  >
+    <input
+      class="sc-AxirZ jLIEBi"
+      placeholder="Search"
+      type="search"
+    />
+    <img
+      alt="Click here to search"
+      class="sc-AxiKw cjWnXD"
+      src="./images/search.png"
+    />
+  </div>
 </DocumentFragment>
 `;
