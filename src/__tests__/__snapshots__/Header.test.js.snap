@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Header renders 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxiKw eJAjmE"
+  >
+    <img
+      alt="NASA logo"
+      class="sc-AxjAm ivsrOq"
+      data-testid="nasa-logo-1"
+      src="./images/nasa.png"
+    />
+    <input
+      class="sc-AxirZ iviowO"
+      placeholder="Search"
+      type="text"
+    />
+  </div>
+</DocumentFragment>
+`;

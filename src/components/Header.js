@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import HeaderImage from './HeaderImage';
 import SearchInput from './SearchInput';
 
-const HeaderContainer = styled.div`
+const HeaderStyles = styled.div`
   height: 60px;
   width: 100vw;
   margin: 0;
@@ -17,14 +17,14 @@ const HeaderContainer = styled.div`
 
 function Header() {
   return (
-    <HeaderContainer>
+    <HeaderStyles>
       <HeaderImage 
         src="./images/nasa.png" 
         alt="NASA logo" 
-        id="nasa-logo-1"
+        data-testid="nasa-logo-1"
       />
       <SearchInput />
-    </HeaderContainer>
+    </HeaderStyles>
   )
 }
 
