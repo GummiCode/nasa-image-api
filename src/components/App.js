@@ -7,9 +7,7 @@ function App() {
     <>
       <GlobalStyles />
       <div className="App">
-        <p>
-          ʕ⊙ᴥ⊙ʔ
-        </p>
+        {/* <p>ʕ⊙ᴥ⊙ʔ</p> */}
         <Header />
         </div>
     </>

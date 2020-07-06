@@ -22,8 +22,6 @@ function Header() {
         src="./images/nasa.png" 
         alt="NASA logo" 
         id="nasa-logo-1"
-        height="303" 
-        width="1024" 
       />
       <SearchInput />
     </HeaderContainer>

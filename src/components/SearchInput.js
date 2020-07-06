@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledSearchInput = styled.input`
@@ -8,10 +8,12 @@ const StyledSearchInput = styled.input`
   border: 2px solid maroon;
   margin: 0 5px;
   padding: 0 5px;
+  color: #F6F4F0;
+  font-size: 1em;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 `
 
 const SearchInput = (props) => {
-
   return (
     <>
       <StyledSearchInput
