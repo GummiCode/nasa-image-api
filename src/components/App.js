@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { GlobalStyles } from '../styles/global';
 import Header from './Header';
+import SearchResults from './SearchResults';
 
 function App() {
 
   const [searchResults, setSearchResults] = useState({});
+  console.log(searchResults);
 
   return (
     <>
@@ -12,6 +14,7 @@ function App() {
       <Header
       setSearchResults = {setSearchResults}
        />
+      <SearchResults />
     </>
   )
 }
