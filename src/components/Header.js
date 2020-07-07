@@ -15,17 +15,20 @@ const HeaderStyles = styled.div`
   align-items: center;
 `;
 
-function Header() {
-  
+
+const Header = ({ setSearchResults }) => {
+
   return (
     <HeaderStyles>
       <HeaderImage 
         src="./images/nasa.png" 
         alt="NASA logo"
       />
-      <SearchInput />
+      <SearchInput
+        setSearchResults={setSearchResults}
+       />
     </HeaderStyles>
   )
-}
+};
 
 export default Header;

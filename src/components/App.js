@@ -4,10 +4,17 @@ import Header from './Header';
 
 function App() {
 
+  const [searchResults, setSearchResults] = useState({});
+  console.log("Testing");
+  console.log(searchResults);
+  console.log("Testing!");
+
   return (
     <>
       <GlobalStyles />
-      <Header />
+      <Header
+      setSearchResults = {setSearchResults}
+       />
     </>
   )
 }

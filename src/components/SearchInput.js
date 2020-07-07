@@ -30,16 +30,12 @@ const StyledSearchIcon = styled.img`
   margin: 0 0 0 5px;
 `
 
-const SearchInput = (props) => {
+const SearchInput = ({ setSearchResults }) => {
 
-  const [searchState, updateSearchState] = useState("moon");
+  const [searchState, setSearchState] = useState("moon");
 
-  const [searchResults, updateSearchResults] = useState ({
-
-  });
-
-  const performSearch = () => {
-    getImages(searchState);
+  const performSearch = async () => {
+    setSearchResults(await getImages(searchState));
   };
   
   const submitSearch = (event) => {
@@ -54,7 +50,7 @@ const SearchInput = (props) => {
         <StyledSearchInput
           type="search"
           placeholder="Search"
-          onChange={e => updateSearchState(e.target.value)}
+          onChange={e => setSearchState(e.target.value)}
           onKeyDown={submitSearch}
         />
         <StyledSearchIcon 

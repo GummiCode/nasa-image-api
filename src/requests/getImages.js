@@ -18,10 +18,12 @@ const getImages = (query) => {
           description: imageData.data[0].description_508
         }));
           console.log(images);
+        return images;
         
       })
       .catch((error) => {
-        console.log(error); 
+        console.log(error);
+        // return (error.response); 
       })
   }
 };
