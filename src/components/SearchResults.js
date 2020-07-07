@@ -1,20 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SearchResultsStyles = styled.div`
-  color: blue;
+
+const SearchResultsContainer = styled.div`
+  margin: 50px;
 `;
 
+const ScaledImage = styled.img`
+  width: 270px;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+`
 
 
 const SearchResults = (props) => {
 
   return (
-     <> 
-      <SearchResultsStyles>  
+      <SearchResultsContainer> 
         <p>Search Results Section</p>
-      </SearchResultsStyles>
-    </>
+        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
+      </SearchResultsContainer>
   );
 };
 
