@@ -5,16 +5,21 @@ import SearchResults from './SearchResults';
 
 function App() {
 
-  const [searchResults, setSearchResults] = useState({});
+  const [searchResults, setSearchResults] = useState([]);
   console.log(searchResults);
 
   return (
     <>
       <GlobalStyles />
+
       <Header
-      setSearchResults = {setSearchResults}
+        setSearchResults = {setSearchResults}
        />
-      <SearchResults />
+
+      <SearchResults
+        searchResults = {searchResults} 
+      />
+
     </>
   )
 }

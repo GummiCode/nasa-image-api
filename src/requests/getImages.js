@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-
-
 const getImages = (query) => {
   if (!query) {
     return Promise.resolve([]);
@@ -11,7 +9,9 @@ const getImages = (query) => {
       .then((response) => {
         const returnedImages =  response.data.collection.items;
         const parsedImages = returnedImages.filter( image => image.data[0].media_type === "image");
+        console.log(parsedImages);
         const images = parsedImages.map( imageData => ({
+          nasa_id: imageData.data[0].nasa_id,
           image: imageData.links[0].href,
           description: imageData.data[0].description_508
         }));

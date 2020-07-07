@@ -23,19 +23,24 @@ const ScaledImage = styled.img`
 `
 
 
-const SearchResults = (props) => {
+const SearchResults = ({ searchResults }) => {
+
+  console.log("SearchResults Testing")
+  console.log(searchResults)
 
   return (
       <SearchResultsContainer>
-        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
-        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
-        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
-        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
-        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
-        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
+        {
+          searchResults.map(result => (
+            <ScaledImage
+              key={result.nasa_id}
+              src={result.image}
+              alt={result.description}
+            />
+          ))
+        }
       </SearchResultsContainer>
   );
 };
 
 export default SearchResults;
-
