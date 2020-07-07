@@ -22,18 +22,14 @@ const ScaledImage = styled.img`
   object-fit: cover;
 `
 
-
 const SearchResults = ({ searchResults }) => {
-
-  console.log("SearchResults Testing")
-  console.log(searchResults)
 
   return (
       <SearchResultsContainer>
         {
-          searchResults.map(result => (
+          searchResults.map((result, index) => (
             <ScaledImage
-              key={result.nasa_id}
+              key={result.id}
               src={result.image}
               alt={result.description}
             />

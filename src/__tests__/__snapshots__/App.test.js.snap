@@ -25,5 +25,8 @@ exports[`component App renders 1`] = `
       />
     </div>
   </div>
+  <div
+    class="sc-AxgMl cylSDq"
+  />
 </DocumentFragment>
 `;
