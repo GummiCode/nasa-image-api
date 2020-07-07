@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import getImages from '../requests/getImages'
 
@@ -61,6 +62,10 @@ const SearchInput = ({ setSearchResults }) => {
       </StyledSearchFrame>
     </>
   )
+};
+
+SearchInput.propTypes = {
+  setSearchResults: PropTypes.func
 };
 
 export default SearchInput;

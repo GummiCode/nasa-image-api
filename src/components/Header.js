@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import HeaderImage from './HeaderImage';
 import SearchInput from './SearchInput';
@@ -28,7 +29,12 @@ const Header = ({ setSearchResults }) => {
         setSearchResults={setSearchResults}
        />
     </HeaderStyles>
-  )
+  );
+
+};
+
+Header.propTypes = {
+  setSearchResults: PropTypes.func
 };
 
 export default Header;
