@@ -3,12 +3,19 @@ import styled from 'styled-components';
 
 
 const SearchResultsContainer = styled.div`
-  margin: 50px;
+  width: auto; 
+  min-width: 1000px; 
+  margin: 20px;
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: start;
 `;
 
 const ScaledImage = styled.img`
   width: 270px;
   height: 300px;
+  margin: 10px;
   border: none;
   border-radius: 10px;
   overflow: hidden;
@@ -19,8 +26,12 @@ const ScaledImage = styled.img`
 const SearchResults = (props) => {
 
   return (
-      <SearchResultsContainer> 
-        <p>Search Results Section</p>
+      <SearchResultsContainer>
+        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
+        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
+        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
+        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
+        <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
         <ScaledImage src="https://images-assets.nasa.gov/image/PIA12233/PIA12233~thumb.jpg" alt="Placeholder Image" />
       </SearchResultsContainer>
   );
