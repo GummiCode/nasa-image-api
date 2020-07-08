@@ -9,6 +9,7 @@ const getImages = (query) => {
       .then((response) => {
         const returnedImages =  response.data.collection.items;
         const parsedImages = returnedImages.filter( image => image.data[0].media_type === "image");
+        console.log(returnedImages);
         const images = parsedImages.map( imageData => ({
           id: imageData.data[0].nasa_id,
           image: imageData.links[0].href,
