@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 const LoaderContainer = styled.div`
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-flow: column;
@@ -19,8 +19,8 @@ const LoaderSpinner = () => {
       <Loader
         type="RevolvingDot"
         color="red"
-        height={300}
-        width={300}
+        height={100}
+        width={100}
       />
     </LoaderContainer>
   );

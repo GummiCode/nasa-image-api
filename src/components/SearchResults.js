@@ -5,11 +5,11 @@ import styled from 'styled-components';
 
 const SearchResultsContainer = styled.div`
   width: auto; 
-  min-width: 1000px; 
+  min-width: 600px; 
   margin: 20px;
   display: flex; 
   flex-flow: row wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
 `;
 
