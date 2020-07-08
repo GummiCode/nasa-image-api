@@ -13,7 +13,7 @@ function App() {
 
   const chooseRender = ( searchResults ) => {
     if (searchResults.notSearched) {
-
+      // renders nothing
     } else if (searchResults.images?.length > 0) {
       return (
         <SearchResults searchResults = {searchResults} />

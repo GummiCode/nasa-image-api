@@ -15,8 +15,4 @@ const NoImagesMessage = () => {
   )
 };
 
-NoImagesMessage.propTypes = {
-  errorParams: PropTypes.object
-};
-
 export default NoImagesMessage;
