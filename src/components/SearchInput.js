@@ -31,15 +31,20 @@ const StyledSearchIcon = styled.img`
   margin: 0 0 0 5px;
 `
 
-const SearchInput = ({ setSearchResults }) => {
+const SearchInput = ({ setSearchResults, setResultsLoading }) => {
 
   const [searchState, setSearchState] = useState("moon");
 
+
   const performSearch = async () => {
+    setResultsLoading(true);
     setSearchResults(await getImages(searchState));
+    setResultsLoading(false);
   };
   
   const submitSearch = (event) => {
+ 
+    console.log("loading");
     if (event.key === 'Enter' || event.target.alt === "Click here to search") {
       performSearch();
     }
@@ -65,7 +70,8 @@ const SearchInput = ({ setSearchResults }) => {
 };
 
 SearchInput.propTypes = {
-  setSearchResults: PropTypes.func
+  setSearchResults: PropTypes.func,
+  setResultsLoading: PropTypes.func
 };
 
 export default SearchInput;

@@ -6,6 +6,8 @@ import SearchResults from './SearchResults';
 function App() {
 
   const [searchResults, setSearchResults] = useState([]);
+  const [resultsLoading, setResultsLoading] = useState(false);
+
   console.log(searchResults);
 
   return (
@@ -14,7 +16,10 @@ function App() {
 
       <Header
         setSearchResults = {setSearchResults}
+        setResultsLoading = {setResultsLoading}
        />
+
+      {resultsLoading && <h1>Loading...</h1>}
 
       <SearchResults
         searchResults = {searchResults} 

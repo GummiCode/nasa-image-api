@@ -16,8 +16,12 @@ const HeaderStyles = styled.div`
   align-items: center;
 `;
 
-
-const Header = ({ setSearchResults }) => {
+const HeaderText = styled.p`
+  margin: 0 0 0 5px;
+  font-size: 2.1em;
+  color: red;
+`
+const Header = ({ setSearchResults, setResultsLoading }) => {
 
   return (
     <HeaderStyles>
@@ -25,8 +29,10 @@ const Header = ({ setSearchResults }) => {
         src="./images/nasa.png" 
         alt="NASA logo"
       />
+      <HeaderText>Image Search</HeaderText>
       <SearchInput
         setSearchResults={setSearchResults}
+        setResultsLoading={setResultsLoading}
        />
     </HeaderStyles>
   );
@@ -34,7 +40,8 @@ const Header = ({ setSearchResults }) => {
 };
 
 Header.propTypes = {
-  setSearchResults: PropTypes.func
+  setSearchResults: PropTypes.func,
+  setResultsLoading: PropTypes.func
 };
 
 export default Header;
