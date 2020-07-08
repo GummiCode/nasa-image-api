@@ -22,19 +22,38 @@ const ScaledImage = styled.img`
   overflow: hidden;
   object-fit: cover;
 `
+const ErrorMessage = styled.h2`
+  color: #D6D4D0;
+`
 
-const SearchResults = ({ searchResults }) => {
+const conditionalRender = (searchResults, searchedBefore) => {
+  if (Array.isArray(searchResults) && searchResults.length === 0 && searchedBefore) {
+    return (
+      <ErrorMessage>No images were found. Please try a different search term.</ErrorMessage>
+    )
+  } else if (typeof searchResults === "string") {
+    return (
+      <ErrorMessage>{searchResults}</ErrorMessage>
+    )
+  } else {
+    return (
+      searchResults.map((result) => (
+        <ScaledImage
+          key={result.id}
+          src={result.image}
+          alt={result.description}
+        />
+      ))
+    )
+  }
+};
+
+const SearchResults = ({ searchResults, searchedBefore }) => {
 
    return (
       <SearchResultsContainer>
         {
-          searchResults.map((result) => (
-            <ScaledImage
-              key={result.id}
-              src={result.image}
-              alt={result.description}
-            />
-          ))
+          conditionalRender(searchResults, searchedBefore)
         }
       </SearchResultsContainer>
   );
@@ -45,3 +64,4 @@ SearchResults.propTypes = {
 }
 
 export default SearchResults;
+

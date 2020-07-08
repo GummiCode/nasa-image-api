@@ -6,22 +6,23 @@ const getImages = (query) => {
   } else {
     return axios
       .get(`https://images-api.nasa.gov/search?q=${query}`)
-      .then((response) => {
-        const returnedImages =  response.data.collection.items;
-        const parsedImages = returnedImages.filter( image => image.data[0].media_type === "image");
-        console.log(returnedImages);
-        const images = parsedImages.map( imageData => ({
-          id: imageData.data[0].nasa_id,
-          image: imageData.links[0].href,
-          description: imageData.data[0].description_508
-        }));
-        return images;
-        
-      })
-      .catch((error) => {
-        console.log(error);
-        // return (error.response); 
-      })
+      .then(response => {
+          if (response.statusText === "OK") {
+            const returnedImages =  response.data.collection.items;
+            const parsedImages = returnedImages.filter( image => image.data[0].media_type === "image");
+            console.log(returnedImages);
+            const images = parsedImages.map( imageData => ({
+              id: imageData.data[0].nasa_id,
+              image: imageData.links[0].href,
+              description: imageData.data[0].description_508
+            }));
+          return images;
+        } else if (response === true) {
+          return (`${response.status} Error: ${response.statusText}`)
+        } else {
+          return ("Oops! Something went wrong!")
+        };
+    })
   }
 };
 

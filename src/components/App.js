@@ -8,6 +8,7 @@ function App() {
 
   const [searchResults, setSearchResults] = useState([]);
   const [resultsLoading, setResultsLoading] = useState(false);
+  const [searchedBefore, setSearchedBefore] = useState(false);
 
   console.log(searchResults);
 
@@ -18,6 +19,7 @@ function App() {
       <Header
         setSearchResults = {setSearchResults}
         setResultsLoading = {setResultsLoading}
+        setSearchedBefore = {setSearchedBefore}
        />
 
       {resultsLoading && 
@@ -27,6 +29,7 @@ function App() {
       {!resultsLoading &&
        <SearchResults
           searchResults = {searchResults} 
+          searchedBefore = {searchedBefore}
         />
       }
     </>
