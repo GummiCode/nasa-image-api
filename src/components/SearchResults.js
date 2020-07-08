@@ -50,4 +50,3 @@ SearchResults.propTypes = {
 }
 
 export default SearchResults;
-

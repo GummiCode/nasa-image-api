@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component ErrorMessage renders with error data passed in 1`] = `
+<DocumentFragment>
+  <h2
+    class="sc-AxjAm cmwgYd"
+  >
+    400 Error: Mock Text
+  </h2>
+</DocumentFragment>
+`;

@@ -3,15 +3,20 @@
 exports[`component Header renders 1`] = `
 <DocumentFragment>
   <div
-    class="sc-AxhUy cJaanl"
+    class="sc-AxhUy auRZU"
   >
     <img
       alt="NASA logo"
       class="sc-AxjAm ivsrOq"
       src="./images/nasa.png"
     />
+    <p
+      class="sc-AxgMl iYmlJd"
+    >
+      Image Search
+    </p>
     <div
-      class="sc-AxirZ kiBIEj"
+      class="sc-AxirZ TCkcf"
     >
       <input
         class="sc-AxiKw iuhRGG"

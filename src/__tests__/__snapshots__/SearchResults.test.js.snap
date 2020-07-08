@@ -3,31 +3,7 @@
 exports[`component SearchResults renders 1`] = `
 <DocumentFragment>
   <div
-    class="sc-AxjAm mFydy"
-  >
-    <img
-      alt="Mock1"
-      class="sc-AxirZ cxxIYp"
-      src="https://mockaddress.mock/1"
-    />
-    <img
-      alt="Mock2"
-      class="sc-AxirZ cxxIYp"
-      src="https://mockaddress.mock/2"
-    />
-    <img
-      alt="Mock3"
-      class="sc-AxirZ cxxIYp"
-      src="https://mockaddress.mock/3"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`component SearchResults renders all objects in the searchResults array 1`] = `
-<DocumentFragment>
-  <div
-    class="sc-AxjAm mFydy"
+    class="sc-AxjAm iyNTKJ"
   >
     <img
       alt="Mock1"
