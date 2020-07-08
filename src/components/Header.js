@@ -10,6 +10,8 @@ const HeaderStyles = styled.div`
   margin: 0;
   padding: 0 10px;
   background: #404138;
+  position: sticky;
+  top: 0px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;

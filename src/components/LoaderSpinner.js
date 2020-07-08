@@ -19,9 +19,8 @@ const LoaderSpinner = () => {
       <Loader
         type="RevolvingDot"
         color="red"
-        height={200}
-        width={200}
-        timeout={3000}
+        height={300}
+        width={300}
       />
     </LoaderContainer>
   );
