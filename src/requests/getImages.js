@@ -16,13 +16,17 @@ const getImages = (query) => {
               image: imageData.links[0].href,
               description: imageData.data[0].description_508
             }));
-          return images;
-        } else if (response === true) {
-          return (`${response.status} Error: ${response.statusText}`)
-        } else {
-          return ("Oops! Something went wrong!")
+          return {
+            images,
+          }
         };
     })
+      .catch(error => {
+        return ({
+          errorStatus: error.response.status,
+          errorText: error.response.statusText
+        })
+      })
   }
 };
 

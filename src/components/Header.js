@@ -24,7 +24,7 @@ const HeaderText = styled.p`
   font-size: 2.2em;
   color: red;
 `
-const Header = ({ setSearchResults, setResultsLoading, setSearchedBefore }) => {
+const Header = ({ setSearchResults, setResultsLoading }) => {
 
   return (
     <HeaderStyles>
@@ -36,7 +36,6 @@ const Header = ({ setSearchResults, setResultsLoading, setSearchedBefore }) => {
       <SearchInput
         setSearchResults={setSearchResults}
         setResultsLoading={setResultsLoading}
-        setSearchedBefore={setSearchedBefore}
        />
     </HeaderStyles>
   );

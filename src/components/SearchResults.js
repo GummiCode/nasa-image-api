@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -22,23 +22,10 @@ const ScaledImage = styled.img`
   overflow: hidden;
   object-fit: cover;
 `
-const ErrorMessage = styled.h2`
-  margin: 0 10px;
-  color: #D6D4D0;
-`
 
-const conditionalRender = (searchResults, searchedBefore) => {
-  if (Array.isArray(searchResults) && searchResults.length === 0 && searchedBefore) {
+const renderImages = (searchResults) => {
     return (
-      <ErrorMessage>No images were found. Please try a different search term.</ErrorMessage>
-    )
-  } else if (typeof searchResults === "string") {
-    return (
-      <ErrorMessage>{searchResults}</ErrorMessage>
-    )
-  } else {
-    return (
-      searchResults.map((result) => (
+      searchResults.images.map((result) => (
         <ScaledImage
           key={result.id}
           src={result.image}
@@ -46,22 +33,20 @@ const conditionalRender = (searchResults, searchedBefore) => {
         />
       ))
     )
-  }
 };
 
-const SearchResults = ({ searchResults, searchedBefore }) => {
+
+const SearchResults = ({ searchResults }) => {
 
    return (
       <SearchResultsContainer>
-        {
-          conditionalRender(searchResults, searchedBefore)
-        }
+        {renderImages(searchResults)}
       </SearchResultsContainer>
   );
 };
 
 SearchResults.propTypes = {
-  searchResults: PropTypes.array
+  searchResults: PropTypes.object
 }
 
 export default SearchResults;

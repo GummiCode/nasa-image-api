@@ -3,14 +3,31 @@ import { GlobalStyles } from '../styles/global';
 import Header from './Header';
 import LoaderSpinner from './LoaderSpinner';
 import SearchResults from './SearchResults';
+import NoImagesMessage from './NoImagesMessage'
+import ErrorMessage from './ErrorMessage';
 
 function App() {
 
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState({notSearched: true});
   const [resultsLoading, setResultsLoading] = useState(false);
-  const [searchedBefore, setSearchedBefore] = useState(false);
 
-  console.log(searchResults);
+  const chooseRender = ( searchResults ) => {
+    if (searchResults.notSearched) {
+
+    } else if (searchResults.images?.length > 0) {
+      return (
+        <SearchResults searchResults = {searchResults} />
+      )
+      } else if (searchResults.images?.length === 0) {
+      return ( 
+        <NoImagesMessage />
+      )
+    } else if (searchResults.errorStatus) {
+      return (
+        <ErrorMessage errorParams = {searchResults} />
+      )
+    }
+  }
 
   return (
     <>
@@ -19,19 +36,14 @@ function App() {
       <Header
         setSearchResults = {setSearchResults}
         setResultsLoading = {setResultsLoading}
-        setSearchedBefore = {setSearchedBefore}
        />
 
       {resultsLoading && 
         <LoaderSpinner />
       }
-  
-      {!resultsLoading &&
-       <SearchResults
-          searchResults = {searchResults} 
-          searchedBefore = {searchedBefore}
-        />
-      }
+
+      {!resultsLoading && 
+        chooseRender(searchResults)};
     </>
   )
 }

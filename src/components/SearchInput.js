@@ -32,7 +32,7 @@ const StyledSearchIcon = styled.img`
   margin: 0 0 0 5px;
 `
 
-const SearchInput = ({ setSearchResults, setResultsLoading, setSearchedBefore }) => {
+const SearchInput = ({ setSearchResults, setResultsLoading }) => {
 
   const [searchState, setSearchState] = useState("");
 
@@ -40,7 +40,6 @@ const SearchInput = ({ setSearchResults, setResultsLoading, setSearchedBefore })
     setResultsLoading(true);
     setSearchResults(await getImages(searchState));
     setResultsLoading(false);
-    setSearchedBefore(true);
   };
   
   const submitSearch = (event) => {
