@@ -17,8 +17,8 @@ const HeaderStyles = styled.div`
 `;
 
 const HeaderText = styled.p`
-  margin: 0 0 0 5px;
-  font-size: 2.1em;
+  margin: 0 5px 0 5px;
+  font-size: 2.2em;
   color: red;
 `
 const Header = ({ setSearchResults, setResultsLoading }) => {

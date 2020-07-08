@@ -5,7 +5,7 @@ import getImages from '../requests/getImages'
 
 
 const StyledSearchFrame = styled.div`
-  height: 28px;
+  height: 30px;
   background: #222222;
   border-radius: 5px;
   border: 2px solid maroon;

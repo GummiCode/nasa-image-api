@@ -23,16 +23,14 @@ function App() {
       {resultsLoading && 
         <LoaderSpinner />
       }
-
+  
       {!resultsLoading &&
        <SearchResults
           searchResults = {searchResults} 
         />
       }
-
     </>
   )
-
 }
 
 export default App;
