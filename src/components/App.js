@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GlobalStyles } from '../styles/global';
 import Header from './Header';
+import LoaderSpinner from './LoaderSpinner';
 import SearchResults from './SearchResults';
 
 function App() {
@@ -19,11 +20,15 @@ function App() {
         setResultsLoading = {setResultsLoading}
        />
 
-      {resultsLoading && <h1>Loading...</h1>}
+      {resultsLoading && 
+        <LoaderSpinner />
+      }
 
-      <SearchResults
-        searchResults = {searchResults} 
-      />
+      {!resultsLoading &&
+       <SearchResults
+          searchResults = {searchResults} 
+        />
+      }
 
     </>
   )

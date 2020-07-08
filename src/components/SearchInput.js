@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import getImages from '../requests/getImages'
 
+
 const StyledSearchFrame = styled.div`
   height: 28px;
-  background: transparent;
+  background: #222222;
   border-radius: 5px;
   border: 2px solid maroon;
   margin: 0 5px;
