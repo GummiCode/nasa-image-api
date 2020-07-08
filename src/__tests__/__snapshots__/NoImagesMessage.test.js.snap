@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component NoImagesMessage renders 1`] = `
+<DocumentFragment>
+  <h2
+    class="sc-AxjAm cmwgYd"
+  >
+    No images found. Please try a different search term.
+  </h2>
+</DocumentFragment>
+`;
