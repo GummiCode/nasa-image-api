@@ -9,7 +9,7 @@ const SearchResultsContainer = styled.div`
   margin: 20px;
   display: flex; 
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
 `;
 
@@ -23,6 +23,7 @@ const ScaledImage = styled.img`
   object-fit: cover;
 `
 const ErrorMessage = styled.h2`
+  margin: 0 10px;
   color: #D6D4D0;
 `
 

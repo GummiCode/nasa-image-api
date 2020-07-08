@@ -20,6 +20,7 @@ const HeaderStyles = styled.div`
 
 const HeaderText = styled.p`
   margin: 0 5px 0 5px;
+  width: 230px;
   font-size: 2.2em;
   color: red;
 `
