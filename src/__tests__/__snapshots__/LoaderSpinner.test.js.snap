@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component LoaderSpinner renders 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxjAm doHGtG"
+  >
+    <div
+      aria-busy="true"
+      class=""
+    >
+      <svg
+        aria-label="audio-loading"
+        height="100"
+        version="1.1"
+        width="100"
+        x="0px"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0px"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="44"
+          stroke="red"
+          stroke-width="4"
+          style="opacity: 0.5;"
+        />
+        <circle
+          cx="8"
+          cy="54"
+          fill="red"
+          r="6"
+          stroke="red"
+          stroke-width="3"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="2s"
+            from="0 50 48"
+            repeatCount="indefinite"
+            to="360 50 52"
+            type="rotate"
+          />
+        </circle>
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
