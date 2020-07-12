@@ -20,15 +20,14 @@ function App() {
         setResultsLoading = {setResultsLoading}
        />
 
-      {resultsLoading && 
-        <LoaderSpinner />
-      }
+        <LoaderSpinner
+          resultsLoading = {resultsLoading} 
+        />
 
-      {!resultsLoading && 
         <ResultsRenderer
+          resultsLoading = {resultsLoading}
           searchResults={searchResults}
         />
-      };
     </>
   )
 }

@@ -4,8 +4,10 @@ import NoImagesMessage from './NoImagesMessage'
 import ErrorMessage from './ErrorMessage';
 import BlankMessage from './BlankMessage';
 
-const ResultsRenderer = ({ searchResults }) => {
+const ResultsRenderer = ({ searchResults, resultsLoading }) => {
       if (searchResults.notSearched) {
+        return (null)
+      } else if (resultsLoading) {
         return (null)
       } else if (searchResults.noSearchTerm) {
         return (

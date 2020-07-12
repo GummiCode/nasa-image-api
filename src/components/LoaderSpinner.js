@@ -13,17 +13,21 @@ const LoaderContainer = styled.div`
   align-items: center;
 `
 
-const LoaderSpinner = () => {
-  return (
-    <LoaderContainer>
-      <Loader
-        type="RevolvingDot"
-        color="red"
-        height={100}
-        width={100}
-      />
-    </LoaderContainer>
-  );
+const LoaderSpinner = ({ resultsLoading }) => {
+  if (resultsLoading) {
+    return (
+      <LoaderContainer>
+        <Loader
+          type="RevolvingDot"
+          color="red"
+          height={100}
+          width={100}
+          data-testid="Loader"
+        />
+      </LoaderContainer>
+    );
+  };
+  return (null);
 }
 
 export default LoaderSpinner;
