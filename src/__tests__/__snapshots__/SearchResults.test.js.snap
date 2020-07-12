@@ -5,21 +5,25 @@ exports[`component SearchResults renders 1`] = `
   <div
     class="sc-AxjAm iyNTKJ"
   >
-    <img
-      alt="Mock1"
-      class="sc-AxirZ cxxIYp"
-      src="https://mockaddress.mock/1"
-    />
-    <img
-      alt="Mock2"
-      class="sc-AxirZ cxxIYp"
-      src="https://mockaddress.mock/2"
-    />
-    <img
-      alt="Mock3"
-      class="sc-AxirZ cxxIYp"
-      src="https://mockaddress.mock/3"
-    />
+    <div
+      data-testid="images-rendered"
+    >
+      <img
+        alt="Mock1"
+        class="sc-AxirZ cxxIYp"
+        src="https://mockaddress.mock/1"
+      />
+      <img
+        alt="Mock2"
+        class="sc-AxirZ cxxIYp"
+        src="https://mockaddress.mock/2"
+      />
+      <img
+        alt="Mock3"
+        class="sc-AxirZ cxxIYp"
+        src="https://mockaddress.mock/3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

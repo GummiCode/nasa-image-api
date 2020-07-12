@@ -10,7 +10,7 @@ color: #D6D4D0;
 const NoImagesMessage = () => {
   return (
     <ErrorStyles>
-      {`No images found. Please try a different search term.`}
+      No images found. Please try a different search term.
     </ErrorStyles>
   )
 };

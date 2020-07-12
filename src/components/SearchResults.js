@@ -25,13 +25,15 @@ const ScaledImage = styled.img`
 
 const renderImages = (searchResults) => {
     return (
-      searchResults.images.map((result) => (
-        <ScaledImage
-          key={result.id}
-          src={result.image}
-          alt={result.description}
-        />
-      ))
+      <div data-testid="images-rendered">
+        {searchResults.images.map((result) => (
+          <ScaledImage
+            key={result.id}
+            src={result.image}
+            alt={result.description}
+          />
+        ))}
+       </div> 
     )
 };
 
