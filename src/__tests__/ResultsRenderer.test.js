@@ -33,7 +33,7 @@ test(`component ResultsRenderer doesn't render a component when searchResults = 
       searchResults={{notSearched: true}} resultsLoading={false} 
     />
   );
-  const blank = queryByTestId("blank-message");
+  const blank = queryByText("Please enter a search term.");
   expect(blank).not.toBeInTheDocument();
   const noImages = queryByText("No images found.");
   expect(noImages).not.toBeInTheDocument();
@@ -49,7 +49,7 @@ test(`component ResultsRenderer doesn't render a component when resultsLoading =
       searchResults={{notSearched: false}} resultsLoading={true} 
     />
   );
-  const blank = queryByTestId("blank-message");
+  const blank = queryByText("Please enter a search term.");
   expect(blank).not.toBeInTheDocument();
   const noImages = queryByText("No images found.");
   expect(noImages).not.toBeInTheDocument();
@@ -58,3 +58,14 @@ test(`component ResultsRenderer doesn't render a component when resultsLoading =
   const imagesRendered = queryByTestId("images-rendered");
   expect(imagesRendered).not.toBeInTheDocument();
 });
+
+test('component renders BlankMessage when searchResults.noSearchTerm = true', () => {
+  const { queryByText } = render(
+    <ResultsRenderer
+      searchResults={{ noSearchTerm: true}}
+      resultsLoading={false}
+    />
+  );
+  const blank = queryByText("Please enter a search term.");
+  expect(blank).toBeInTheDocument();
+})

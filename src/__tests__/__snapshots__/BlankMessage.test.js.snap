@@ -2,14 +2,10 @@
 
 exports[`component BlankMessage renders 1`] = `
 <DocumentFragment>
-  <div
-    data-testid="blank-message"
+  <h2
+    class="sc-AxjAm cmwgYd"
   >
-    <h2
-      class="sc-AxjAm cmwgYd"
-    >
-      Please enter a search term.
-    </h2>
-  </div>
+    Please enter a search term.
+  </h2>
 </DocumentFragment>
 `;
