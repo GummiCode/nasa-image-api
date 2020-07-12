@@ -38,7 +38,11 @@ const SearchInput = ({ setSearchResults, setResultsLoading }) => {
 
   const performSearch = async () => {
     setResultsLoading(true);
-    setSearchResults(await getImages(searchState));
+    if (!searchState) {
+      setSearchResults({noSearchTerm: true})
+    } else {
+      setSearchResults(await getImages(searchState));
+    };
     setResultsLoading(false);
   };
   
