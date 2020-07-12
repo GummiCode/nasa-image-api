@@ -28,8 +28,27 @@ test('component ResultsRenderer renders', () => {
   expect (component).toMatchSnapshot();
 });
 
-test(`component ResultsRenderer doesn't render a component when searchResults = [notSearched: True}] `, () => {
-  const { queryByTestId, queryByText } = render( <ResultsRenderer searchResults={{notSearched: true}} />);
+test(`component ResultsRenderer doesn't render a component when searchResults = {notSearched: True}`, () => {
+   const { queryByTestId, queryByText } = render( <ResultsRenderer 
+      searchResults={{notSearched: true}} resultsLoading={false} 
+    />
+  );
+  const blank = queryByTestId("blank-message");
+  expect(blank).not.toBeInTheDocument();
+  const noImages = queryByText("No images found.");
+  expect(noImages).not.toBeInTheDocument();
+  const errorMessage = queryByTestId("error-message");
+  expect(errorMessage).not.toBeInTheDocument();
+  const imagesRendered = queryByTestId("images-rendered");
+  expect(imagesRendered).not.toBeInTheDocument();
+});
+
+test(`component ResultsRenderer doesn't render a component when resultsLoading = true`, () => {
+  const { queryByTestId, queryByText } = render(
+    <ResultsRenderer 
+      searchResults={{notSearched: false}} resultsLoading={true} 
+    />
+  );
   const blank = queryByTestId("blank-message");
   expect(blank).not.toBeInTheDocument();
   const noImages = queryByText("No images found.");
