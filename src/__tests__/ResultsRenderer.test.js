@@ -26,6 +26,11 @@ const mockNoResults = {
   images: []
 };
 
+const mockError = {
+  errorStatus: 777,
+  errorText: "mockError"
+};
+
 test('component ResultsRenderer renders', () => {
   const { asFragment } = render(<ResultsRenderer searchResults={mockResults} />);
   const component = asFragment();
@@ -83,15 +88,26 @@ test('component renders SearchResults when SearchResults.images.length > 0', () 
   );
   const rendered = queryByTestId("images-rendered");
   expect(rendered).toBeInTheDocument();
-  });
+});
 
-  test('component renders NoImagesMessage when SearchResults.images.length === 0', () => {
-    const { queryByText } = render(
-      <ResultsRenderer
-        searchResults={mockNoResults}
-        resultsLoading={false}
-      />
-    );
-    const noResults = queryByText("No images found. Please try a different search term.");
-    expect(noResults).toBeInTheDocument();
-    });
+test('component renders NoImagesMessage when SearchResults.images.length === 0', () => {
+  const { queryByText } = render(
+    <ResultsRenderer
+      searchResults={mockNoResults}
+      resultsLoading={false}
+    />
+  );
+  const noResults = queryByText("No images found. Please try a different search term.");
+  expect(noResults).toBeInTheDocument();
+});
+
+test('component renders ErrorMessage when SearchResults contains error data', () => {
+  const { queryByTestId } = render(
+    <ResultsRenderer
+      searchResults={mockError}
+      resultsLoading={false}
+    />
+  );
+  const errorRendered = queryByTestId("error-message");
+  expect(errorRendered).toBeInTheDocument();
+});

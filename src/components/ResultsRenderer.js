@@ -9,9 +9,14 @@ const ResultsRenderer = ({ searchResults, resultsLoading }) => {
         return (null)
       } else if (resultsLoading) {
         return (null)
+
       } else if (searchResults.noSearchTerm) {
         return (
           <BlankMessage />
+        )
+      } else if (searchResults.errorStatus) {
+        return (
+          <ErrorMessage errorParams = {searchResults} />
         )
       } else if (searchResults.images.length > 0) {
         return (
@@ -20,10 +25,6 @@ const ResultsRenderer = ({ searchResults, resultsLoading }) => {
       } else if (searchResults.images.length === 0 ) {
         return ( 
           <NoImagesMessage />
-        )
-      } else if (searchResults.errorStatus) {
-        return (
-          <ErrorMessage errorParams = {searchResults} />
         )
       }
 }
