@@ -14,3 +14,9 @@ test('component LoaderSpinner renders the Loading icon when resultsLoading state
   expect(loader).toBeInTheDocument();
 });
 
+test('component LoaderSpinner does not render the Loading icon when resultsLoading state is false', () => {
+  const { queryByTestId } = render(<LoaderSpinner resultsLoading={false} />);
+  const loader = queryByTestId("Loader");
+  expect(loader).not.toBeInTheDocument();
+});
+
