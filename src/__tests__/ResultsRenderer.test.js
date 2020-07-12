@@ -68,4 +68,4 @@ test('component renders BlankMessage when searchResults.noSearchTerm = true', ()
   );
   const blank = queryByText("Please enter a search term.");
   expect(blank).toBeInTheDocument();
-})
+});
