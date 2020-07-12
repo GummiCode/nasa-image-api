@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component BlankMessage renders 1`] = `
+<DocumentFragment>
+  <h2
+    class="sc-AxjAm cmwgYd"
+  >
+    Please enter a search term.
+  </h2>
+</DocumentFragment>
+`;
