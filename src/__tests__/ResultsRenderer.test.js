@@ -69,3 +69,14 @@ test('component renders BlankMessage when searchResults.noSearchTerm = true', ()
   const blank = queryByText("Please enter a search term.");
   expect(blank).toBeInTheDocument();
 });
+
+test('component renders SearchResults when SearchResults.images.length > 0', () => {
+  const { queryByTestId } = render(
+    <ResultsRenderer
+      searchResults={mockResults}
+      resultsLoading={false}
+    />
+  );
+  const rendered = queryByTestId("images-rendered");
+  expect(rendered).toBeInTheDocument();
+  });
