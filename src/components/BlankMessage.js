@@ -8,9 +8,11 @@ color: #D6D4D0;
 
 const BlankMessage = () => {
   return (
-    <BlankStyles>
-      Please enter a search term.
-    </BlankStyles>
+    <div data-testid="blank-message">
+      <BlankStyles>
+        Please enter a search term.
+      </BlankStyles>
+    </div>
   )
 };
 

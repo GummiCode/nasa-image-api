@@ -27,3 +27,4 @@ test('component ResultsRenderer renders', () => {
   const component = asFragment();
   expect (component).toMatchSnapshot();
 });
+

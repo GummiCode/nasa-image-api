@@ -9,9 +9,11 @@ color: #D6D4D0;
 
 const ErrorMessage = ({ errorParams }) => {
   return (
-    <ErrorStyles>
-      {`${errorParams.errorStatus} Error: ${errorParams.errorText}`}
-    </ErrorStyles>
+    <div data-testid="error-message">
+      <ErrorStyles>
+        {`${errorParams.errorStatus} Error: ${errorParams.errorText}`}
+      </ErrorStyles>
+    </div>
   )
 };
 
