@@ -20,6 +20,7 @@ const StyledSearchFrame = styled.div`
 const StyledSearchInput = styled.input`
   background: transparent;
   border: none;
+  outline: none;
   margin: 0;
   padding: 0;
   color: #F6F4F0;
