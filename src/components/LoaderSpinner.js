@@ -14,15 +14,15 @@ const LoaderContainer = styled.div`
 `
 
 const LoaderSpinner = ({ resultsLoading }) => {
+  console.log(resultsLoading);
   if (resultsLoading) {
     return (
-      <LoaderContainer>
+      <LoaderContainer data-testid="Loader">
         <Loader
           type="RevolvingDot"
           color="red"
           height={100}
           width={100}
-          data-testid="Loader"
         />
       </LoaderContainer>
     );

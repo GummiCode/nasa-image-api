@@ -6,7 +6,7 @@ exports[`component SearchInput renders 1`] = `
     class="sc-AxjAm fxsGwY"
   >
     <input
-      class="sc-AxirZ jLIEBi"
+      class="sc-AxirZ fruxeL"
       placeholder="Search"
       type="search"
     />

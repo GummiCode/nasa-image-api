@@ -4,6 +4,7 @@ exports[`component LoaderSpinner renders 1`] = `
 <DocumentFragment>
   <div
     class="sc-AxjAm doHGtG"
+    data-testid="Loader"
   >
     <div
       aria-busy="true"

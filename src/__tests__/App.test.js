@@ -7,8 +7,3 @@ test('component App renders', () => {
   const component = asFragment();
   expect (component).toMatchSnapshot();
 });
-
-test('component App renders a loading spinner when resultsLoading is true', () => {
-  const { getByTestId } = render( <App /> );
-  expect(getByTestId("Loader")).toBeInTheDocument();
-})

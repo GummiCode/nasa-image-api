@@ -30,6 +30,5 @@ exports[`component App renders 1`] = `
       />
     </div>
   </div>
-  ;
 </DocumentFragment>
 `;
