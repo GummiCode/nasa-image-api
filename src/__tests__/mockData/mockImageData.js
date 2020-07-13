@@ -1,5 +1,5 @@
 
-const mockGetImages = {
+const mockImageData = {
   "data": {
     "collection": {
       "href": "https://images-api.nasa.gov/search?q=moon",
@@ -261,4 +261,4 @@ const mockGetImages = {
   "request": {}
 };
 
-export default mockGetImages;
+export default mockImageData;

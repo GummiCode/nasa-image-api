@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 200705
+## NASA Image API
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This app fetches images from NASA's image API (https://api.nasa.gov/) using a string search term entered by the user. The app parses the images from the search results and displays them in a scrollable area of the browser window.
 
-### `npm start`
+This is a component-based React app. Styling is implemented almost exclusively using the styled-components node package, with the exception of one line of styling applied to index.html to negate its automatic margins.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Aims
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Implement a moderately sizeable React app
+- Practice styled-components
+- Practice testing of React components
 
-### `npm test`
+## Running the App
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Open a bash command terminal.
+2. Navigate to this directory.
+3. Enter the command ```npm start```. The app will load in your default browser.
 
-### `npm run build`
+## Using the App
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Enter a search term into the search field in the page's header, then press enter or click on the magnifying glass in the search field.
+- If the search term matches part of the metadata from any images in the NASA images api, these will be displayed in the area below the header bar. This area is scrollable.
+- If the search term does not match part of the metadata for any of the images in the NASA images API then a message will be displayed stating this.
+- If the server returns an error then the error code and a description of the error state will be displayed below the header bar.
+- A distinct error message is also shown if the user tried to initiate a search without entering a search term into the search field.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Tests have been written for most of the components of the app. Each component has a render test in the form of a snapshot test. Components with conditional rendering have more extensive tests to assess each of their functions.
 
-### `npm run eject`
+Two components do not yet have full tests.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- getImages (controller) fetches API data. Tests have not been written for this script. This needs to be done.
+- SearchInput (controller) renders the search input field and manages implementation of the getImages controller. A snapshot render test has been written for this component but additional tests are required to check its interaction with the getImages controller.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To run the tests follow the follwing steps:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Open a bash command terminal.
+2. Navigate to this directory.
+3. Enter the command ```npm test```. The tests will run in the console.
+4. Success and fail states will be displayed in the console, along with instructions regarding how to examine and process the test data.
 
-## Learn More
+## Next Steps
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Top Priority:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The outstanding tests detailed above (for the getImages controller and SearchInput component) need to be written and validated.
 
-### Code Splitting
+### Optional Additions:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Display an image description overlayed on an image when the mouse cursor hovers over it. The required data is already includes in the parsed image data provided by getImages so this step just requires appropriate modification/addition of some aesthetic components.
+- Make the rendered images clickable, and display an enlarged version of the clicked image over the viewport. Include a close button to return the user to the homepage.
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
