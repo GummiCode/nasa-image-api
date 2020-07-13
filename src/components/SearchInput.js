@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import getImages from '../requests/getImages'
+import getImages from '../controllers/getImages'
 
 
 const StyledSearchFrame = styled.div`

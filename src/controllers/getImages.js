@@ -8,6 +8,7 @@ const getImages = (query) => {
       .get(`https://images-api.nasa.gov/search?q=${query}`)
       .then(response => {
           if (response.statusText === "OK") {
+            console.log(response);
             const returnedImages =  response.data.collection.items;
             const parsedImages = returnedImages.filter( image => image.data[0].media_type === "image");
             console.log(returnedImages);
@@ -22,6 +23,7 @@ const getImages = (query) => {
         };
     })
       .catch(error => {
+        console.log(error);
         return ({
           errorStatus: error.response.status,
           errorText: error.response.statusText
