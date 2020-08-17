@@ -1,5 +1,4 @@
-## 200705
-## NASA Image API
+# NASA Image Search
 
 ## Introduction
 
@@ -9,9 +8,10 @@ This is a component-based React app. Styling is implemented almost exclusively u
 
 ## Aims
 
-- Implement a moderately sizeable React app
+- Implement an introductory-level React app
 - Practice styled-components
 - Practice testing of React components
+- Interface a React front-end with an API back-end.
 
 ## Running the App
 
@@ -52,6 +52,7 @@ To run the tests follow the follwing steps:
 
 ### Optional Additions:
 
+- Add media queries to make the app look better on mobile devices.
 - Display an image description overlayed on an image when the mouse cursor hovers over it. The required data is already includes in the parsed image data provided by getImages so this step just requires appropriate modification/addition of some aesthetic components.
 - Make the rendered images clickable, and display an enlarged version of the clicked image over the viewport. Include a close button to return the user to the homepage.
 
