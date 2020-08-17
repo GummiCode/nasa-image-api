@@ -7,7 +7,8 @@ const getImages = (query) => {
     return axios
       .get(`https://images-api.nasa.gov/search?q=${query}`)
       .then(response => {
-          if (response.statusText === "OK") {
+        console.log(response);
+          if (response.status === 200) {
             console.log(response);
             const returnedImages =  response.data.collection.items;
             const parsedImages = returnedImages.filter( image => image.data[0].media_type === "image");

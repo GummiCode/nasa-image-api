@@ -11,6 +11,8 @@ function App() {
   const [searchResults, setSearchResults] = useState({notSearched: true});
   const [resultsLoading, setResultsLoading] = useState(false);
 
+  console.log(searchResults);
+
   return (
     <>
       <GlobalStyles />
