@@ -1,15 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
+import moonImage from '../assets/images/moonbg.jpg';
 
 export const GlobalStyles = createGlobalStyle`
   body {
     border: 1px solid red;
-
     height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
     background: #F6F4F0;
-    background-image: url(./images/moonbg.jpg);
+    background-image: url(${moonImage});
     background-size: cover;
     background-attachment: fixed;
     color: #363537;
