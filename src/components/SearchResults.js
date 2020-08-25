@@ -4,13 +4,19 @@ import styled from 'styled-components';
 
 
 const SearchResultsContainer = styled.div`
-  width: calc(100vw - 40px); 
-  min-width: 600px; 
+  width: calc(100vw - 40px);
   margin: 20px;
   display: flex; 
   flex-flow: row wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
+`;
+
+const ResultsFrame = styled.div`
+display: flex; 
+flex-flow: row wrap;
+justify-content: center;
+align-items: start;
 `;
 
 const ScaledImage = styled.img`
@@ -25,7 +31,7 @@ const ScaledImage = styled.img`
 
 const renderImages = (searchResults) => {
     return (
-      <div data-testid="images-rendered">
+      <ResultsFrame data-testid="images-rendered">
         {searchResults.images.map((result) => (
           <ScaledImage
             key={result.id}
@@ -33,7 +39,7 @@ const renderImages = (searchResults) => {
             alt={result.description}
           />
         ))}
-       </div> 
+       </ResultsFrame> 
     )
 };
 
