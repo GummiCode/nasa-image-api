@@ -7,7 +7,7 @@ import nasaLogo from '../assets/images/nasa.png';
 
 const HeaderStyles = styled.div`
   height: 60px;
-  width: 100vw;
+  width: calc(100vw - 20px);
   margin: 0;
   padding: 0 10px;
   background: #404138;
@@ -21,6 +21,10 @@ const HeaderStyles = styled.div`
   @media (max-width: 640px) {
     height: 50px;
   }
+
+  @media (max-width: 480px) {
+    height: 40px;
+  }
 `;
 
 const HeaderText = styled.p`
@@ -31,6 +35,18 @@ const HeaderText = styled.p`
 
   @media (max-width: 640px) {
     font-size: 1.8em;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2em;
+  }
+
+  @media (max-width: 355px) {
+    font-size: 1em;
   }
 `
 const Header = ({ setSearchResults, setResultsLoading }) => {

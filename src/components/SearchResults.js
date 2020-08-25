@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 
 const SearchResultsContainer = styled.div`
-  width: auto; 
+  width: calc(100vw - 40px); 
   min-width: 600px; 
   margin: 20px;
   display: flex; 

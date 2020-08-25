@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import getImages from '../controllers/getImages'
+import getImages from '../controllers/getImages';
+import searchImage from '../assets/images/search.png';
 
 
 const StyledSearchFrame = styled.div`
@@ -15,6 +16,10 @@ const StyledSearchFrame = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 480px) {
+    height: 25px;
+  }
 `
 
 const StyledSearchInput = styled.input`
@@ -26,6 +31,22 @@ const StyledSearchInput = styled.input`
   color: #F6F4F0;
   font-size: 1em;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+  @media (max-width: 480px) {
+    width: 140px;
+  }
+
+  @media (max-width: 400px) {
+    width: 100px;
+  }
+
+  @media (max-width: 355px) {
+    width: 90px;
+  }
+
+  @media (max-width: 355px) {
+    font-size: 1em;
+  }
 `
 const StyledSearchIcon = styled.img`
   height: 18px;
@@ -63,7 +84,7 @@ const SearchInput = ({ setSearchResults, setResultsLoading }) => {
           onKeyDown={submitSearch}
         />
         <StyledSearchIcon 
-          src="./images/search.png"
+          src={searchImage}
           alt="Click here to search"
           onClick={submitSearch}
         />
