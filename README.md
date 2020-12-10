@@ -1,23 +1,40 @@
 # NASA Image Search
 
-## Introduction
+## Background
 
-This app fetches images from NASA's image API (https://api.nasa.gov/) using a string search term entered by the user. The app parses the images from the search results and displays them in a scrollable area of the browser window.
+NASA host [an API of image and video assets for public use](https://api.nasa.gov/). I created a simple image search for this asset library.
 
-This is a component-based React app. Styling is implemented almost exclusively using the styled-components node package, with the exception of one line of styling applied to index.html to negate its automatic margins.
+You can try it out [here](https://gummicode.github.io/nasa-image-search/).
 
-## Aims
+---
 
-- Implement an introductory-level React app
-- Practice styled-components
-- Practice testing of React components
-- Interface a React front-end with an API back-end.
+## Motivation
 
-## Running the App
+My partner proposed this project. He provided a remit which I implemented. This project allowed me to work on a few techs I was already a little familiar with, and try out a few new ones at the same time:
 
-1. Open a bash command terminal.
-2. Navigate to this directory.
-3. Enter the command ```npm start```. The app will load in your default browser.
+- [React](https://reactjs.org/)
+- [styled-components](https://styled-components.com/)
+- [react-testing-library](https://github.com/testing-library/react-testing-library)
+- Interfacing a React front-end with an API.
+
+---
+
+## Screenshots
+
+![Screenshot of the search engine. The term 'cloud' has been searched. Images related to this are shown, in a grid; most are aerial views of clouds.](/readme_images/desktop_screenshot_1.png)
+
+---
+
+## Installation
+
+The game is hosted on [GitHub Pages](https://gummicode.github.io/nasa-image-search/) and can be run from there.
+
+To install the repo locally:
+1. [Clone this repo](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+2. Run `npm install` from root.
+3. To run the repo locally run `npm start`.
+
+---
 
 ## Using the App
 
@@ -26,6 +43,8 @@ This is a component-based React app. Styling is implemented almost exclusively u
 - If the search term does not match part of the metadata for any of the images in the NASA images API then a message will be displayed stating this.
 - If the server returns an error then the error code and a description of the error state will be displayed below the header bar.
 - A distinct error message is also shown if the user tried to initiate a search without entering a search term into the search field.
+
+---
 
 ## Testing
 
@@ -44,15 +63,40 @@ To run the tests follow the follwing steps:
 3. Enter the command ```npm test```. The tests will run in the console.
 4. Success and fail states will be displayed in the console, along with instructions regarding how to examine and process the test data.
 
-## Next Steps
+---
 
-### Top Priority:
+## Future Work
 
 - The outstanding tests detailed above (for the getImages controller and SearchInput component) need to be written and validated.
-
-### Optional Additions:
-
 - Add media queries to make the app look better on mobile devices.
 - Display an image description overlayed on an image when the mouse cursor hovers over it. The required data is already includes in the parsed image data provided by getImages so this step just requires appropriate modification/addition of some aesthetic components.
 - Make the rendered images clickable, and display an enlarged version of the clicked image over the viewport. Include a close button to return the user to the homepage.
 
+---
+
+## Framework
+
+Built with [React](https://github.com/facebook/react).
+Styled with [styled-components](https://styled-components.com/).
+Tests written with [react-testing-library](https://github.com/testing-library/react-testing-library).
+
+---
+
+## Credits
+
+This application uses Open Source components. You can find the source code of their open source projects along with license information below. Huge thanks to all of the people who contribute to this work ❤️️ 
+
+- Project: [React](https://github.com/facebook/react)  
+Copyright (c) Facebook, Inc. and its affiliates.  
+License: [MIT](https://github.com/facebook/react/blob/master/LICENSE)
+
+- Project: [react-testing-library](https://github.com/testing-library/react-testing-library)  
+Copyright (c) 2017 Kent C. Dodds
+License: [MIT](https://github.com/testing-library/react-testing-library/blob/master/LICENSE)
+
+- Project: [styled-components](https://github.com/styled-components/styled-components)  
+Copyright (c) 2016-present Glen Maddern and Maximilian Stoiber  
+License: [MIT](https://github.com/facebook/react/blob/master/LICENSE)
+
+- Project: [NASA IMage and Vuideo Library](https://api.nasa.gov/)
+Public domian.
