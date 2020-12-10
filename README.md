@@ -98,5 +98,5 @@ License: [MIT](https://github.com/testing-library/react-testing-library/blob/mas
 Copyright (c) 2016-present Glen Maddern and Maximilian Stoiber  
 License: [MIT](https://github.com/facebook/react/blob/master/LICENSE)
 
-- Project: [NASA IMage and Vuideo Library](https://api.nasa.gov/)  
+- Project: [NASA Image and Video Library](https://api.nasa.gov/)  
 Public domian.
