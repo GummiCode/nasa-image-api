@@ -1,4 +1,4 @@
-# NASA Image Search
+# NASA Image Search 🛰️
 
 ## Background
 
@@ -76,8 +76,8 @@ To run the tests follow the follwing steps:
 
 ## Framework
 
-Built with [React](https://github.com/facebook/react).
-Styled with [styled-components](https://styled-components.com/).
+Built with [React](https://github.com/facebook/react).  
+Styled with [styled-components](https://styled-components.com/).  
 Tests written with [react-testing-library](https://github.com/testing-library/react-testing-library).
 
 ---
@@ -90,13 +90,13 @@ This application uses Open Source components. You can find the source code of th
 Copyright (c) Facebook, Inc. and its affiliates.  
 License: [MIT](https://github.com/facebook/react/blob/master/LICENSE)
 
-- Project: [react-testing-library](https://github.com/testing-library/react-testing-library)  
-Copyright (c) 2017 Kent C. Dodds
+- Project: [react-testing-library.](https://github.com/testing-library/react-testing-library)  
+Copyright (c) 2017 Kent C. Dodds.  
 License: [MIT](https://github.com/testing-library/react-testing-library/blob/master/LICENSE)
 
 - Project: [styled-components](https://github.com/styled-components/styled-components)  
 Copyright (c) 2016-present Glen Maddern and Maximilian Stoiber  
 License: [MIT](https://github.com/facebook/react/blob/master/LICENSE)
 
-- Project: [NASA IMage and Vuideo Library](https://api.nasa.gov/)
+- Project: [NASA IMage and Vuideo Library](https://api.nasa.gov/)  
 Public domian.
