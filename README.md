@@ -4,7 +4,7 @@
 
 NASA host [an API of image and video assets for public use](https://api.nasa.gov/). I created a simple image search for this asset library.
 
-You can try it out [here](https://gummicode.github.io/nasa-image-search/).
+You can try it out [here](https://devarrowsmith.github.io/nasa-image-search/).
 
 ---
 
@@ -27,7 +27,7 @@ My partner proposed this project. He provided a remit which I implemented. This 
 
 ## Installation
 
-The game is hosted on [GitHub Pages](https://gummicode.github.io/nasa-image-search/) and can be run from there.
+The game is hosted on [GitHub Pages](https://devarrowsmith.github.io/nasa-image-search/) and can be run from there.
 
 To install the repo locally:
 1. [Clone this repo](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
