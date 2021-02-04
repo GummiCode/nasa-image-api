@@ -69,7 +69,6 @@ To run the tests follow the follwing steps:
 
 - The outstanding tests detailed above (for the getImages controller and SearchInput component) need to be written and validated.
 - Add media queries to make the app look better on mobile devices.
-- Display an image description overlayed on an image when the mouse cursor hovers over it. The required data is already includes in the parsed image data provided by getImages so this step just requires appropriate modification/addition of some aesthetic components.
 - Make the rendered images clickable, and display an enlarged version of the clicked image over the viewport. Include a close button to return the user to the homepage.
 
 ---
