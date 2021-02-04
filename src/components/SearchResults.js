@@ -36,6 +36,7 @@ const renderImages = (searchResults) => {
           <ScaledImage
             key={result.id}
             src={result.image}
+            title={result.description}
             alt={result.description}
           />
         ))}
